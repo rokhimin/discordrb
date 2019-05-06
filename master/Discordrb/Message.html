@@ -470,7 +470,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reactions-instance_method" title="#reactions (instance method)">#<strong>reactions</strong>  &#x21d2; Hash&lt;String =&gt; Reaction&gt; </a>
+      <a href="#reactions-instance_method" title="#reactions (instance method)">#<strong>reactions</strong>  &#x21d2; Array&lt;Reaction&gt; </a>
     
 
     
@@ -489,7 +489,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The reaction objects attached to this message keyed by the name of the reaction.</p>
+    <span class="summary_desc"><div class='inline'><p>The reaction objects contained in this message.</p>
 </div></span>
   
 </li>
@@ -1792,7 +1792,7 @@
       <div class="method_details ">
   <h3 class="signature " id="reactions-instance_method">
   
-    #<strong>reactions</strong>  &#x21d2; <tt>Hash&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span> =&gt; <span class='object_link'><a href="Reaction.html" title="Discordrb::Reaction (class)">Reaction</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
+    #<strong>reactions</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Reaction.html" title="Discordrb::Reaction (class)">Reaction</a></span>&gt;</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -1800,7 +1800,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the reaction objects attached to this message keyed by the name of the reaction</p>
+    <p>Returns the reaction objects contained in this message.</p>
 
 
   </div>
@@ -1813,12 +1813,12 @@
     <li>
       
       
-        <span class='type'>(<tt>Hash&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span> =&gt; <span class='object_link'><a href="Reaction.html" title="Discordrb::Reaction (class)">Reaction</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Reaction.html" title="Discordrb::Reaction (class)">Reaction</a></span>&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>the reaction objects attached to this message keyed by the name of the reaction</p>
+        <div class='inline'><p>the reaction objects contained in this message.</p>
 </div>
       
     </li>
@@ -2483,12 +2483,12 @@
         <span class='name'>user</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>the user who used this reaction</p>
+        <div class='inline'><p>the user or user ID who used this reaction</p>
 </div>
       
     </li>
@@ -2905,7 +2905,7 @@ You can only edit your own messages.</p>
       <pre class="code"><span class="info file"># File 'lib/discordrb/data/message.rb', line 237</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_my_reactions'>my_reactions</span>
-  <span class='ivar'>@reactions</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:me</span><span class='rparen'>)</span>
+  <span class='ivar'>@reactions</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:me</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3120,7 +3120,7 @@ You can only edit your own messages.</p>
       <pre class="code"><span class="info file"># File 'lib/discordrb/data/message.rb', line 231</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reactions?'>reactions?</span>
-  <span class='ivar'>@reactions</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+  <span class='ivar'>@reactions</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3280,9 +3280,9 @@ You can only edit your own messages.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Apr  6 14:10:30 2019 by
+  Generated on Mon May  6 17:15:54 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.19 (ruby-2.6.3).
 </div>
 
     </div>

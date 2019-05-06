@@ -753,6 +753,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#bot_members-instance_method" title="#bot_members (instance method)">#<strong>bot_members</strong>  &#x21d2; Array&lt;Member&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>An array of all the bot members on this server.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#categories-instance_method" title="#categories (instance method)">#<strong>categories</strong>  &#x21d2; Array&lt;Channel&gt; </a>
     
 
@@ -1384,6 +1407,29 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Sets the server&#39;s name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#non_bot_members-instance_method" title="#non_bot_members (instance method)">#<strong>non_bot_members</strong>  &#x21d2; Array&lt;Member&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>An array of all the non bot members on this server.</p>
 </div></span>
   
 </li>
@@ -2620,20 +2666,20 @@
       <pre class="lines">
 
 
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518</pre>
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 508</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 518</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_emoji'>add_emoji</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_image'>image</span><span class='comma'>,</span> <span class='id identifier rubyid_roles'>roles</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_image_string'>image_string</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span>
@@ -2685,7 +2731,7 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
         <span class='name'>user</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -2730,7 +2776,7 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
         <span class='name'>roles</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span></tt>, <tt>Array&lt;<span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>, <span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span>, #<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span></tt>, <tt>Array&lt;<span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span>, <span class='object_link'><a href="../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>&gt;</tt>)</span>
       
       
       
@@ -2796,15 +2842,15 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-265
-266
-267
-268
-269
-270</pre>
+275
+276
+277
+278
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 265</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_member_using_token'>add_member_using_token</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='id identifier rubyid_access_token'>access_token</span><span class='comma'>,</span> <span class='label'>nick:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>roles:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>deaf:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>mute:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span>
@@ -2859,12 +2905,12 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-763
-764
-765</pre>
+773
+774
+775</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 763</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 773</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_afk_channel'>afk_channel</span>
   <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='lparen'>(</span><span class='ivar'>@afk_channel_id</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@afk_channel_id</span>
@@ -2918,12 +2964,12 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-635
-636
-637</pre>
+645
+646
+647</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 635</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 645</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_afk_channel='>afk_channel=</span><span class='lparen'>(</span><span class='id identifier rubyid_afk_channel'>afk_channel</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_update_server_data'>update_server_data</span><span class='lparen'>(</span><span class='label'>afk_channel_id:</span> <span class='id identifier rubyid_afk_channel'>afk_channel</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='rparen'>)</span>
@@ -2979,12 +3025,12 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-723
-724
-725</pre>
+733
+734
+735</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 723</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 733</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_any_emoji?'>any_emoji?</span>
   <span class='ivar'>@emoji</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
@@ -3034,12 +3080,12 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
         <span class='name'>user</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The user to filter entries to.</p>
+        <div class='inline'><p>The user, or their ID, to filter entries to.</p>
 </div>
       
     </li>
@@ -3064,12 +3110,12 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
         <span class='name'>before</span>
       
       
-        <span class='type'>(<tt>Entry</tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt>Entry</tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The entry to use to not include all entries after it.</p>
+        <div class='inline'><p>The entry, or its ID, to use to not include all entries after it.</p>
 </div>
       
     </li>
@@ -3100,17 +3146,17 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-161
-162
-163
-164
-165
-166
-167
-168</pre>
+171
+172
+173
+174
+175
+176
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_audit_logs'>audit_logs</span><span class='lparen'>(</span><span class='label'>action:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>user:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>limit:</span> <span class='int'>50</span><span class='comma'>,</span> <span class='label'>before:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Invalid audit log action!</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_action'>action</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="AuditLogs.html" title="Discordrb::AuditLogs (class)">AuditLogs</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="AuditLogs.html#ACTIONS-constant" title="Discordrb::AuditLogs::ACTIONS (constant)">ACTIONS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -3167,17 +3213,17 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-600
-601
-602
-603
-604
-605
-606
-607</pre>
+610
+611
+612
+613
+614
+615
+616
+617</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 600</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 610</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_available_voice_regions'>available_voice_regions</span>
   <span class='kw'>return</span> <span class='ivar'>@available_voice_regions</span> <span class='kw'>if</span> <span class='ivar'>@available_voice_regions</span>
@@ -3217,7 +3263,7 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
         <span class='name'>user</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -3268,12 +3314,12 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-552
-553
-554</pre>
+562
+563
+564</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 552</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 562</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ban'>ban</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='id identifier rubyid_message_days'>message_days</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_ban_user'><span class='object_link'><a href="API/Server.html#ban_user-class_method" title="Discordrb::API::Server.ban_user (method)">ban_user</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message_days'>message_days</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
@@ -3325,15 +3371,15 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-541
-542
-543
-544
-545
-546</pre>
+551
+552
+553
+554
+555
+556</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 541</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 551</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bans'>bans</span>
   <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bans'><span class='object_link'><a href="API/Server.html#bans-class_method" title="Discordrb::API::Server.bans (method)">bans</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -3445,15 +3491,15 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-288
-289
-290
-291
-292
-293</pre>
+298
+299
+300
+301
+302
+303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 288</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 298</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_begin_prune'>begin_prune</span><span class='lparen'>(</span><span class='id identifier rubyid_days'>days</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Days must be between 1 and 30</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_days'>days</span><span class='period'>.</span><span class='id identifier rubyid_between?'>between?</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>30</span><span class='rparen'>)</span>
@@ -3508,6 +3554,63 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot'>bot</span>
+  <span class='id identifier rubyid_member'>member</span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_members-instance_method">
+  
+    #<strong>bot_members</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Member.html" title="Discordrb::Member (class)">Member</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns an array of all the bot members on this server.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Member.html" title="Discordrb::Member (class)">Member</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>an array of all the bot members on this server.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
 146
 147
 148</pre>
@@ -3515,8 +3618,8 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
     <td>
       <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 146</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_bot'>bot</span>
-  <span class='id identifier rubyid_member'>member</span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_profile'>profile</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_members'>bot_members</span>
+  <span class='id identifier rubyid_members'>members</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:bot_account?</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3565,12 +3668,12 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-308
-309
-310</pre>
+318
+319
+320</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 308</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 318</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_categories'>categories</span>
   <span class='ivar'>@channels</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:category?</span><span class='rparen'>)</span>
@@ -3710,12 +3813,12 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
         <span class='name'>parent</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>parent category for this channel to be created in.</p>
+        <div class='inline'><p>parent category, or its ID, for this channel to be created in.</p>
 </div>
       
     </li>
@@ -3808,18 +3911,18 @@ For more information about Discord&#39;s OAuth2 implementation, see: <a href="ht
       <pre class="lines">
 
 
-464
-465
-466
-467
-468
-469
-470
-471
-472</pre>
+474
+475
+476
+477
+478
+479
+480
+481
+482</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 464</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 474</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_channel'>create_channel</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>topic:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>bitrate:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>user_limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>permission_overwrites:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>parent:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>nsfw:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>rate_limit_per_user:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>position:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Channel.html#TYPES-constant" title="Discordrb::Channel::TYPES (constant)">TYPES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Symbol</span><span class='rparen'>)</span>
@@ -3965,26 +4068,26 @@ permissions are the default, colour is the default etc.</p>
       <pre class="lines">
 
 
-484
-485
-486
-487
-488
-489
-490
-491
-492
-493
 494
 495
 496
 497
 498
 499
-500</pre>
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 484</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 494</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_role'>create_role</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>new role</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>colour:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>hoist:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>mentionable:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>permissions:</span> <span class='int'>104_324_161</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_colour'>colour</span> <span class='op'>=</span> <span class='id identifier rubyid_colour'>colour</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:combined</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_colour'>colour</span><span class='period'>.</span><span class='id identifier rubyid_combined'>combined</span> <span class='op'>:</span> <span class='id identifier rubyid_colour'>colour</span>
@@ -4147,12 +4250,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-680
-681
-682</pre>
+690
+691
+692</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 680</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 690</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default_message_notifications'>default_message_notifications</span>
   <span class='const'><span class='object_link'><a href="#NOTIFICATION_LEVELS-constant" title="Discordrb::Server::NOTIFICATION_LEVELS (constant)">NOTIFICATION_LEVELS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span> <span class='ivar'>@default_message_notifications</span>
@@ -4210,14 +4313,14 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-686
-687
-688
-689
-690</pre>
+696
+697
+698
+699
+700</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 686</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 696</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default_message_notifications='>default_message_notifications=</span><span class='lparen'>(</span><span class='id identifier rubyid_notification_level'>notification_level</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_notification_level'>notification_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#NOTIFICATION_LEVELS-constant" title="Discordrb::Server::NOTIFICATION_LEVELS (constant)">NOTIFICATION_LEVELS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_notification_level'>notification_level</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_notification_level'>notification_level</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Symbol</span><span class='rparen'>)</span>
@@ -4254,12 +4357,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-578
-579
-580</pre>
+588
+589
+590</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 578</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 588</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_delete'><span class='object_link'><a href="API/Server.html#delete-class_method" title="Discordrb::API::Server.delete (method)">delete</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='rparen'>)</span>
@@ -4294,7 +4397,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>emoji</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Emoji.html" title="Discordrb::Emoji (class)">Emoji</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Emoji.html" title="Discordrb::Emoji (class)">Emoji</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -4328,12 +4431,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-523
-524
-525</pre>
+533
+534
+535</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 523</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 533</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_emoji'>delete_emoji</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_delete_emoji'><span class='object_link'><a href="API/Server.html#delete_emoji-class_method" title="Discordrb::API::Server.delete_emoji (method)">delete_emoji</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_emoji'>emoji</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
@@ -4368,7 +4471,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>emoji</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Emoji.html" title="Discordrb::Emoji (class)">Emoji</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Emoji.html" title="Discordrb::Emoji (class)">Emoji</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -4398,7 +4501,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>roles</span>
       
       
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span>, <span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>, <span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Role.html" title="Discordrb::Role (class)">Role</a></span>, <span class='object_link'><a href="../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span>&gt;</tt>)</span>
       
       
       
@@ -4449,15 +4552,15 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-533
-534
-535
-536
-537
-538</pre>
+543
+544
+545
+546
+547
+548</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 533</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 543</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit_emoji'>edit_emoji</span><span class='lparen'>(</span><span class='id identifier rubyid_emoji'>emoji</span><span class='comma'>,</span> <span class='label'>name:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>roles:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>reason:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_emoji'>emoji</span> <span class='op'>=</span> <span class='ivar'>@emoji</span><span class='lbracket'>[</span><span class='id identifier rubyid_emoji'>emoji</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='rbracket'>]</span>
@@ -4516,13 +4619,13 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-189
-190
-191
-192</pre>
+199
+200
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed_channel'>embed_channel</span>
   <span class='id identifier rubyid_cache_embed_data'>cache_embed_data</span> <span class='kw'>if</span> <span class='ivar'>@embed_enabled</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -4562,12 +4665,12 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>channel</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>the channel to be referenced by the embed</p>
+        <div class='inline'><p>the channel, or its ID, to be referenced by the embed</p>
 </div>
       
     </li>
@@ -4581,12 +4684,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-214
-215
-216</pre>
+224
+225
+226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 224</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed_channel='>embed_channel=</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_modify_embed'>modify_embed</span><span class='lparen'>(</span><span class='id identifier rubyid_embed?'>embed?</span><span class='comma'>,</span> <span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
@@ -4640,12 +4743,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-197
-198
-199</pre>
+207
+208
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed_enabled='>embed_enabled=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_modify_embed'>modify_embed</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_embed_channel'>embed_channel</span><span class='rparen'>)</span>
@@ -4701,13 +4804,13 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-180
-181
-182
-183</pre>
+190
+191
+192
+193</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 180</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 190</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed_enabled?'>embed_enabled?</span>
   <span class='id identifier rubyid_cache_embed_data'>cache_embed_data</span> <span class='kw'>if</span> <span class='ivar'>@embed_enabled</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -4821,12 +4924,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-708
-709
-710</pre>
+718
+719
+720</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 708</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 718</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_explicit_content_filter'>explicit_content_filter</span>
   <span class='const'><span class='object_link'><a href="#FILTER_LEVELS-constant" title="Discordrb::Server::FILTER_LEVELS (constant)">FILTER_LEVELS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span> <span class='ivar'>@explicit_content_filter</span>
@@ -4880,14 +4983,14 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-716
-717
-718
-719
-720</pre>
+726
+727
+728
+729
+730</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 716</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 726</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_explicit_content_filter='>explicit_content_filter=</span><span class='lparen'>(</span><span class='id identifier rubyid_filter_level'>filter_level</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_filter_level'>filter_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#FILTER_LEVELS-constant" title="Discordrb::Server::FILTER_LEVELS (constant)">FILTER_LEVELS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_filter_level'>filter_level</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_filter_level'>filter_level</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Symbol</span><span class='rparen'>)</span>
@@ -4943,18 +5046,18 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-623
-624
-625
-626
-627
-628
-629
-630
-631</pre>
+633
+634
+635
+636
+637
+638
+639
+640
+641</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 623</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 633</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_icon='>icon=</span><span class='lparen'>(</span><span class='id identifier rubyid_icon'>icon</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_icon'>icon</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:read</span>
@@ -4995,12 +5098,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-822
-823
-824</pre>
+832
+833
+834</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 822</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 832</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;Server name=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@name</span><span class='embexpr_end'>}</span><span class='tstring_content'> id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@id</span><span class='embexpr_end'>}</span><span class='tstring_content'> large=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@large</span><span class='embexpr_end'>}</span><span class='tstring_content'> region=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@region</span><span class='embexpr_end'>}</span><span class='tstring_content'> owner=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@owner</span><span class='embexpr_end'>}</span><span class='tstring_content'> afk_channel_id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@afk_channel_id</span><span class='embexpr_end'>}</span><span class='tstring_content'> system_channel_id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@system_channel_id</span><span class='embexpr_end'>}</span><span class='tstring_content'> afk_timeout=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@afk_timeout</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -5052,13 +5155,13 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-151
-152
-153
-154</pre>
+161
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integrations'>integrations</span>
   <span class='id identifier rubyid_integration'>integration</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_integrations'><span class='object_link'><a href="API/Server.html#integrations-class_method" title="Discordrb::API::Server.integrations (method)">integrations</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -5111,13 +5214,13 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-739
-740
-741
-742</pre>
+749
+750
+751
+752</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 739</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 749</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_invites'>invites</span>
   <span class='id identifier rubyid_invites'>invites</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_invites'><span class='object_link'><a href="API/Server.html#invites-class_method" title="Discordrb::API::Server.invites (method)">invites</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -5153,7 +5256,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>user</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -5189,12 +5292,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-566
-567
-568</pre>
+576
+577
+578</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 566</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 576</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kick'>kick</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove_member'><span class='object_link'><a href="API/Server.html#remove_member-class_method" title="Discordrb::API::Server.remove_member (method)">remove_member</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
@@ -5229,12 +5332,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-583
-584
-585</pre>
+593
+594
+595</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 583</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 593</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_leave'>leave</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/User.html" title="Discordrb::API::User (module)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_leave_server'><span class='object_link'><a href="API/User.html#leave_server-class_method" title="Discordrb::API::User.leave_server (method)">leave_server</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='rparen'>)</span>
@@ -5449,12 +5552,12 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>channel</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>the channel to be referenced by the embed</p>
+        <div class='inline'><p>the channel, or its ID, to be referenced by the embed</p>
 </div>
       
     </li>
@@ -5485,16 +5588,16 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-233
-234
-235
-236
-237
-238
-239</pre>
+243
+244
+245
+246
+247
+248
+249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 233</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 243</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_modify_embed'>modify_embed</span><span class='lparen'>(</span><span class='id identifier rubyid_enabled'>enabled</span><span class='comma'>,</span> <span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cache_embed_data'>cache_embed_data</span> <span class='kw'>if</span> <span class='ivar'>@embed_enabled</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -5533,7 +5636,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>user</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -5548,7 +5651,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>channel</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -5567,12 +5670,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-573
-574
-575</pre>
+583
+584
+585</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 573</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 583</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_move'>move</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_member'><span class='object_link'><a href="API/Server.html#update_member-class_method" title="Discordrb::API::Server.update_member (method)">update_member</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='comma'>,</span> <span class='label'>channel_id:</span> <span class='id identifier rubyid_channel'>channel</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='rparen'>)</span>
@@ -5626,15 +5729,72 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-595
-596
-597</pre>
+605
+606
+607</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 595</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 605</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name='>name=</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_update_server_data'>update_server_data</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="non_bot_members-instance_method">
+  
+    #<strong>non_bot_members</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Member.html" title="Discordrb::Member (class)">Member</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns an array of all the non bot members on this server.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Member.html" title="Discordrb::Member (class)">Member</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>an array of all the non bot members on this server.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_non_bot_members'>non_bot_members</span>
+  <span class='id identifier rubyid_members'>members</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:bot_account?</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -5721,14 +5881,14 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-246
-247
-248
-249
-250</pre>
+256
+257
+258
+259
+260</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 246</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 256</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_online_members'>online_members</span><span class='lparen'>(</span><span class='label'>include_idle:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>include_bots:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='ivar'>@members</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
@@ -5782,12 +5942,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-313
-314
-315</pre>
+323
+324
+325</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 313</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 323</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_orphan_channels'>orphan_channels</span>
   <span class='ivar'>@channels</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_parent'>parent</span> <span class='op'>||</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_category?'>category?</span> <span class='rbrace'>}</span>
@@ -5875,15 +6035,15 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-276
-277
-278
-279
-280
-281</pre>
+286
+287
+288
+289
+290
+291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 276</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prune_count'>prune_count</span><span class='lparen'>(</span><span class='id identifier rubyid_days'>days</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Days must be between 1 and 30</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_days'>days</span><span class='period'>.</span><span class='id identifier rubyid_between?'>between?</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>30</span><span class='rparen'>)</span>
@@ -5945,12 +6105,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-611
-612
-613</pre>
+621
+622
+623</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 611</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 621</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_region'>region</span>
   <span class='id identifier rubyid_available_voice_regions'>available_voice_regions</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='ivar'>@region_id</span> <span class='rbrace'>}</span>
@@ -6004,12 +6164,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-617
-618
-619</pre>
+627
+628
+629</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 617</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 627</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_region='>region=</span><span class='lparen'>(</span><span class='id identifier rubyid_region'>region</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_update_server_data'>update_server_data</span><span class='lparen'>(</span><span class='label'>region:</span> <span class='id identifier rubyid_region'>region</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
@@ -6044,7 +6204,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>id</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -6109,12 +6269,12 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>channel</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>the channel to be referenced by the embed</p>
+        <div class='inline'><p>the channel, or its ID, to be referenced by the embed</p>
 </div>
       
     </li>
@@ -6145,12 +6305,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-223
-224
-225</pre>
+233
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 223</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 233</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_embed_channel'>set_embed_channel</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_modify_embed'>modify_embed</span><span class='lparen'>(</span><span class='id identifier rubyid_embed?'>embed?</span><span class='comma'>,</span> <span class='id identifier rubyid_channel'>channel</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
@@ -6221,12 +6381,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-206
-207
-208</pre>
+216
+217
+218</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 216</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_embed_enabled'>set_embed_enabled</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_modify_embed'>modify_embed</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_embed_channel'>embed_channel</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
@@ -6280,12 +6440,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-696
-697
-698</pre>
+706
+707
+708</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 696</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 706</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_splash='>splash=</span><span class='lparen'>(</span><span class='id identifier rubyid_splash_hash'>splash_hash</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_update_server_data'>update_server_data</span><span class='lparen'>(</span><span class='label'>splash:</span> <span class='id identifier rubyid_splash_hash'>splash_hash</span><span class='rparen'>)</span>
@@ -6337,12 +6497,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-342
-343
-344</pre>
+352
+353
+354</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 342</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 352</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_splash_id'>splash_id</span>
   <span class='ivar'>@splash_id</span> <span class='op'>||=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve'><span class='object_link'><a href="API/Server.html#resolve-class_method" title="Discordrb::API::Server.resolve (method)">resolve</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>splash</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
@@ -6396,15 +6556,15 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-348
-349
-350
-351
-352
-353</pre>
+358
+359
+360
+361
+362
+363</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 348</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 358</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_splash_url'>splash_url</span>
   <span class='id identifier rubyid_splash_id'>splash_id</span> <span class='kw'>if</span> <span class='ivar'>@splash_id</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -6459,12 +6619,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-768
-769
-770</pre>
+778
+779
+780</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 768</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 778</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_system_channel'>system_channel</span>
   <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span><span class='lparen'>(</span><span class='ivar'>@system_channel_id</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@system_channel_id</span>
@@ -6499,7 +6659,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>system_channel</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>, <tt>nil</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Channel.html" title="Discordrb::Channel (class)">Channel</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>, <tt>nil</tt>)</span>
       
       
       
@@ -6518,12 +6678,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-641
-642
-643</pre>
+651
+652
+653</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 641</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 651</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_system_channel='>system_channel=</span><span class='lparen'>(</span><span class='id identifier rubyid_system_channel'>system_channel</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_update_server_data'>update_server_data</span><span class='lparen'>(</span><span class='label'>system_channel_id:</span> <span class='id identifier rubyid_system_channel'>system_channel</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='rparen'>)</span>
@@ -6575,12 +6735,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-298
-299
-300</pre>
+308
+309
+310</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 298</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 308</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text_channels'>text_channels</span>
   <span class='ivar'>@channels</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:text?</span><span class='rparen'>)</span>
@@ -6615,7 +6775,7 @@ that the bot has Read Messages permission on.</p>
         <span class='name'>user</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt>#<span class='object_link'><a href="IDObject.html#resolve_id-instance_method" title="Discordrb::IDObject#resolve_id (method)">resolve_id</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="User.html" title="Discordrb::User (class)">User</a></span></tt>, <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
@@ -6651,12 +6811,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-559
-560
-561</pre>
+569
+570
+571</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 559</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 569</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unban'>unban</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_unban_user'><span class='object_link'><a href="API/Server.html#unban_user-class_method" title="Discordrb::API::Server.unban_user (method)">unban_user</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_resolve_id'>resolve_id</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
@@ -6708,12 +6868,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-661
-662
-663</pre>
+671
+672
+673</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 661</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 671</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_verification_level'>verification_level</span>
   <span class='const'><span class='object_link'><a href="#VERIFICATION_LEVELS-constant" title="Discordrb::Server::VERIFICATION_LEVELS (constant)">VERIFICATION_LEVELS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span> <span class='ivar'>@verification_level</span>
@@ -6767,14 +6927,14 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-667
-668
-669
-670
-671</pre>
+677
+678
+679
+680
+681</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 667</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 677</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_verification_level='>verification_level=</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#VERIFICATION_LEVELS-constant" title="Discordrb::Server::VERIFICATION_LEVELS (constant)">VERIFICATION_LEVELS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_level'>level</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_level'>level</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Symbol</span><span class='rparen'>)</span>
@@ -6828,12 +6988,12 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-303
-304
-305</pre>
+313
+314
+315</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 303</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 313</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_voice_channels'>voice_channels</span>
   <span class='ivar'>@channels</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:voice?</span><span class='rparen'>)</span>
@@ -6885,13 +7045,13 @@ that the bot has Read Messages permission on.</p>
       <pre class="lines">
 
 
-732
-733
-734
-735</pre>
+742
+743
+744
+745</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 732</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 742</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_webhooks'>webhooks</span>
   <span class='id identifier rubyid_webhooks'>webhooks</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="API.html" title="Discordrb::API (module)">API</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="API/Server.html" title="Discordrb::API::Server (module)">Server</a></span></span><span class='period'>.</span><span class='id identifier rubyid_webhooks'><span class='object_link'><a href="API/Server.html#webhooks-class_method" title="Discordrb::API::Server.webhooks (method)">webhooks</a></span></span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -6973,15 +7133,15 @@ server icon and server name in a stylish way. <code>nil</code> if the widget is 
       <pre class="lines">
 
 
-334
-335
-336
-337
-338
-339</pre>
+344
+345
+346
+347
+348
+349</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 334</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 344</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_widget_banner_url'>widget_banner_url</span><span class='lparen'>(</span><span class='id identifier rubyid_style'>style</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_update_data'>update_data</span> <span class='kw'>if</span> <span class='ivar'>@embed_enabled</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -7038,15 +7198,15 @@ stylish way. <code>nil</code> if the widget is not enabled.</p>
       <pre class="lines">
 
 
-319
-320
-321
-322
-323
-324</pre>
+329
+330
+331
+332
+333
+334</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'lib/discordrb/data/server.rb', line 329</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_widget_url'>widget_url</span>
   <span class='id identifier rubyid_update_data'>update_data</span> <span class='kw'>if</span> <span class='ivar'>@embed_enabled</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -7064,9 +7224,9 @@ stylish way. <code>nil</code> if the widget is not enabled.</p>
 </div>
 
       <div id="footer">
-  Generated on Sat Apr  6 14:10:29 2019 by
+  Generated on Mon May  6 17:15:53 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.19 (ruby-2.6.3).
 </div>
 
     </div>
