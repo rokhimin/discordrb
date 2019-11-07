@@ -12,21 +12,20 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Discord API for Ruby'
   spec.description   = 'A Ruby implementation of the Discord (https://discordapp.com) API.'
-  spec.homepage      = 'https://github.com/meew0/discordrb'
+  spec.homepage      = 'https://github.com/discordrb/discordrb'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features|examples|lib/discordrb/webhooks)/}) }
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.metadata = {
-    'changelog_uri' => 'https://github.com/meew0/discordrb/blob/master/CHANGELOG.md'
+    'changelog_uri' => 'https://github.com/discordrb/discordrb/blob/master/CHANGELOG.md'
   }
   spec.require_paths = ['lib']
 
   spec.add_dependency 'ffi', '>= 1.9.24'
   spec.add_dependency 'opus-ruby'
-  spec.add_dependency 'rbnacl', '~> 6.0'
-  spec.add_dependency 'rest-client', '>= 2.1.0.rc1'
+  spec.add_dependency 'rest-client', '>= 2.0.0'
   spec.add_dependency 'websocket-client-simple', '>= 0.3.0'
 
   spec.add_dependency 'discordrb-webhooks', '~> 3.3.0'
@@ -35,11 +34,11 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '>= 1.10', '< 3'
   spec.add_development_dependency 'rake', '~> 12.0'
-  spec.add_development_dependency 'redcarpet', '~> 3.4.0' # YARD markdown formatting
+  spec.add_development_dependency 'redcarpet', '~> 3.5.0' # YARD markdown formatting
   spec.add_development_dependency 'rspec', '~> 3.8.0'
   spec.add_development_dependency 'rspec-prof', '~> 0.0.7'
-  spec.add_development_dependency 'rubocop', '~> 0.68.0'
+  spec.add_development_dependency 'rubocop', '~> 0.74.0'
   spec.add_development_dependency 'rubocop-performance', '~> 1.0'
-  spec.add_development_dependency 'simplecov', '~> 0.16.0'
+  spec.add_development_dependency 'simplecov', '~> 0.17.0'
   spec.add_development_dependency 'yard', '~> 0.9.9'
 end

@@ -24,7 +24,7 @@ module Discordrb::Commands
 
     # Creates a new CommandBot and logs in to Discord.
     # @param attributes [Hash] The attributes to initialize the CommandBot with.
-    # @see {Discordrb::Bot#initialize} for other attributes that should be used to create the underlying regular bot.
+    # @see Discordrb::Bot#initialize Discordrb::Bot#initialize for other attributes that should be used to create the underlying regular bot.
     # @option attributes [String, Array<String>, #call] :prefix The prefix that should trigger this bot's commands. It
     #   can be:
     #
@@ -39,7 +39,7 @@ module Discordrb::Commands
     #     complicated dynamic prefixes (e. g. based on server), or even something else entirely (suffixes, or most
     #     adventurous, infixes).
     # @option attributes [true, false] :advanced_functionality Whether to enable advanced functionality (very powerful
-    #   way to nest commands into chains, see https://github.com/meew0/discordrb/wiki/Commands#command-chain-syntax
+    #   way to nest commands into chains, see https://github.com/discordrb/discordrb/wiki/Commands#command-chain-syntax
     #   for info. Default is false.
     # @option attributes [Symbol, Array<Symbol>, false] :help_command The name of the command that displays info for
     #   other commands. Use an array if you want to have aliases. Default is "help". If none should be created, use
@@ -249,7 +249,7 @@ module Discordrb::Commands
 
         if types[i] == Integer
           begin
-            Integer(arg)
+            Integer(arg, 10)
           rescue ArgumentError
             nil
           end

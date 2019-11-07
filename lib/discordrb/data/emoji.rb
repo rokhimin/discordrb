@@ -30,6 +30,16 @@ module Discordrb
       process_roles(data['roles']) if server
     end
 
+    # ID or name based comparison
+    def ==(other)
+      return false unless other.is_a? Emoji
+      return Discordrb.id_compare(@id, other) if @id
+
+      name == other.name
+    end
+
+    alias_method :eql?, :==
+
     # @return [String] the layout to mention it (or have it used) in a message
     def mention
       "<#{'a' if animated}:#{name}:#{id}>"
@@ -40,6 +50,8 @@ module Discordrb
 
     # @return [String] the layout to use this emoji in a reaction
     def to_reaction
+      return name if id.nil?
+
       "#{name}:#{id}"
     end
 
