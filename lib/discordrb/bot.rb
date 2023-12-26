@@ -311,7 +311,7 @@ module Discordrb
     # connected to voice, the existing connection will be terminated - you don't have to call
     # {Discordrb::Voice::VoiceBot#destroy} before calling this method.
     # @param chan [Channel, String, Integer] The voice channel, or its ID, to connect to.
-    # @param encrypted [true, false] Whether voice communication should be encrypted using
+    # @param encrypted [true, false] Whether voice communication should be encrypted using RbNaCl's SecretBox
     #   (uses an XSalsa20 stream cipher for encryption and Poly1305 for authentication)
     # @return [Voice::VoiceBot] the initialized bot over which audio data can then be sent.
     def voice_connect(chan, encrypted = true)
@@ -614,9 +614,6 @@ module Discordrb
     # Awaits an event, blocking the current thread until a response is received.
     # @param type [Class] The event class that should be listened for.
     # @option attributes [Numeric] :timeout the amount of time to wait for a response before returning `nil`. Waits forever if omitted.
-    # @yield Executed when a matching event is received.
-    # @yieldparam event [Event] The event object that was triggered.
-    # @yieldreturn [true, false] Whether the event matches extra await criteria described by the block
     # @return [Event, nil] The event object that was triggered, or `nil` if a `timeout` was set and no event was raised in time.
     # @raise [ArgumentError] if `timeout` is given and is not a positive numeric value
     def add_await!(type, attributes = {})
@@ -631,12 +628,7 @@ module Discordrb
       block = lambda do |event|
         mutex.synchronize do
           response = event
-          if block_given?
-            result = yield(event)
-            cv.signal if result.is_a?(TrueClass)
-          else
-            cv.signal
-          end
+          cv.signal
         end
       end
 

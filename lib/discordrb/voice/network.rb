@@ -1,21 +1,23 @@
 # frozen_string_literal: true
 
 require 'websocket-client-simple'
+require 'resolv'
 require 'socket'
 require 'json'
 
 require 'discordrb/websocket'
 
 begin
-  LIBSODIUM_AVAILABLE = if ENV['DISCORDRB_NONACL']
-                          false
-                        else
-                          require 'discordrb/voice/sodium'
-                        end
+  RBNACL_AVAILABLE = if ENV['DISCORDRB_NONACL']
+                       false
+                     else
+                       require 'rbnacl'
+                       true
+                     end
 rescue LoadError
   puts "libsodium not available! You can continue to use discordrb as normal but voice support won't work.
-        Read https://github.com/discordrb/discordrb/wiki/Installing-libsodium for more details."
-  LIBSODIUM_AVAILABLE = false
+        Read https://github.com/meew0/discordrb/wiki/Installing-libsodium for more details."
+  RBNACL_AVAILABLE = false
 end
 
 module Discordrb::Voice
@@ -41,12 +43,16 @@ module Discordrb::Voice
     end
 
     # Initializes the UDP socket with data obtained from opcode 2.
-    # @param ip [String] The IP address to connect to.
+    # @param endpoint [String] The voice endpoint to connect to.
     # @param port [Integer] The port to connect to.
     # @param ssrc [Integer] The Super Secret Relay Code (SSRC). Discord uses this to identify different voice users
     #   on the same endpoint.
-    def connect(ip, port, ssrc)
-      @ip = ip
+    def connect(endpoint, port, ssrc)
+      @endpoint = endpoint
+      @endpoint = @endpoint[6..-1] if @endpoint.start_with? 'wss://'
+      @endpoint = @endpoint.gsub(':80', '') # The endpoint may contain a port, we don't want that
+      @endpoint = Resolv.getaddress @endpoint
+
       @port = port
       @ssrc = ssrc
     end
@@ -88,23 +94,23 @@ module Discordrb::Voice
 
     private
 
-    # Encrypts audio data using libsodium
+    # Encrypts audio data using RbNaCl
     # @param header [String] The header of the packet, to be used as the nonce
     # @param buf [String] The encoded audio data to be encrypted
     # @return [String] the audio data, encrypted
     def encrypt_audio(header, buf)
       raise 'No secret key found, despite encryption being enabled!' unless @secret_key
 
-      secret_box = Discordrb::Voice::SecretBox.new(@secret_key)
+      box = RbNaCl::SecretBox.new(@secret_key)
 
       # The nonce is the header of the voice packet with 12 null bytes appended
       nonce = header + ([0] * 12).pack('C*')
 
-      secret_box.box(nonce, buf)
+      box.encrypt(nonce, buf)
     end
 
     def send_packet(packet)
-      @socket.send(packet, 0, @ip, @port)
+      @socket.send(packet, 0, @endpoint, @port)
     end
   end
 
@@ -122,7 +128,7 @@ module Discordrb::Voice
     # @param session [String] The voice session ID Discord sends over the regular websocket
     # @param endpoint [String] The endpoint URL to connect to
     def initialize(channel, bot, token, session, endpoint)
-      raise 'libsodium is unavailable - unable to create voice bot! Please read https://github.com/discordrb/discordrb/wiki/Installing-libsodium' unless LIBSODIUM_AVAILABLE
+      raise 'RbNaCl is unavailable - unable to create voice bot! Please read https://github.com/meew0/discordrb/wiki/Installing-libsodium' unless RBNACL_AVAILABLE
 
       @channel = channel
       @bot = bot
@@ -218,7 +224,7 @@ module Discordrb::Voice
         @port = @ws_data['port']
         @udp_mode = mode
 
-        @udp.connect(@ws_data['ip'], @port, @ssrc)
+        @udp.connect(@endpoint, @port, @ssrc)
         @udp.send_discovery
       when 4
         # Opcode 4 sends the secret key used for encryption

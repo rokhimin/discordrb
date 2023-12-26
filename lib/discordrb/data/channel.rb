@@ -620,8 +620,8 @@ module Discordrb
     # Add a blocking {Await} for a message in this channel. This is identical in functionality to adding a
     # {Discordrb::Events::MessageEvent} await with the `in` attribute as this channel.
     # @see Bot#add_await!
-    def await!(attributes = {}, &block)
-      @bot.add_await!(Discordrb::Events::MessageEvent, { in: @id }.merge(attributes), &block)
+    def await!(attributes = {})
+      @bot.add_await!(Discordrb::Events::MessageEvent, { in: @id }.merge(attributes))
     end
 
     # Creates a new invite to this channel.
@@ -697,20 +697,6 @@ module Discordrb
     end
 
     alias_method :leave, :leave_group
-
-    # Creates a webhook in this channel
-    # @param name [String] the default name of this webhook.
-    # @param avatar [String] the default avatar URL to give this webhook.
-    # @param reason [String] the reason for the webhook creation.
-    # @raise [ArgumentError] if the channel isn't a text channel in a server.
-    # @return [Webhook] the created webhook.
-    def create_webhook(name, avatar = nil, reason = nil)
-      raise ArgumentError, 'Tried to create a webhook in a non-server channel' unless server
-      raise ArgumentError, 'Tried to create a webhook in a non-text channel' unless text_channel?
-
-      response = API::Channel.create_webhook(@bot.token, @id, name, avatar, reason)
-      Webhook.new(JSON.parse(response), @bot)
-    end
 
     # Requests a list of Webhooks on the channel.
     # @return [Array<Webhook>] webhooks on the channel.
